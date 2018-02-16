@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: _columns" enabled="true" name="_c">_columns = {
+	"${field_name}" : fields.${cursor},
+}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: _inherit" enabled="true" name="_i">_inherit = "${cursor}"</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: Default Company" enabled="true" name="def_company">"company_id" : lambda self, cr, uid, context: self.pool.get("res.company")._company_default_get(cr, uid, "${model}", context=context)</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: create" enabled="true" name="def_create">def create(self, cr, uid, vals, context=None):
+	${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: default_get" enabled="true" name="def_default_get">def default_get(self, cr, uid, fields_list, context=None):
+	${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: Event" enabled="true" name="def_event">def ${fct_name}(self, cr, uid, ids, *args, **kwargs):
+	${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: default field Function" enabled="true" name="def_fieldfct">def ${name}(self, cr, uid, ids, field_name, arg, context=None):
+	res = {}
+	for obj in self.browse(cr, uid, ids, context):
+		${cursor}
+	
+	return res</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: default setter/inverse field Function" enabled="true" name="def_fieldfct_inv">def ${name}(self, cr, uid, id, field_name, field_value, arg, context=None):
+	${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: default field Function" enabled="true" name="def_fieldfct_multi">def ${name}(self, cr, uid, ids, field_names, arg, context=None):
+	res = {}
+	for obj in self.browse(cr, uid, ids, context):
+		${cursor}
+	
+	return res</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: default" enabled="true" name="def_funct">def ${method_name}(self, cr, uid, ids, context=None):
+	${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: selection" enabled="true" name="def_selection">def ${method_name}(self, cr, uid, context=None):
+	${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: write" enabled="true" name="def_write">def write(self, cr, uid, ids, vals, context=None):
+	${cursor}
+	
+</template><template autoinsert="true" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="OpenERP: Model" enabled="true" name="Module: OpenERP Model"># -*- coding: utf-8 -*-
+#############################################################################
+#
+#    Copyright (c) 2007 Martin Reisenhofer &lt;martin.reisenhofer@funkring.net&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+
+from openerp.osv import fields, osv
+
+class ${model}(osv.Model):
+	_name = "${model_name}"
+	_description = "${model_description}"
+	_inherit = "${super_model}"
+	_columns = {
+		"${column_name}" : fields.${cursor}
+	}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="OpenERP: Model" enabled="true" name="Module: OpenERP Model (8.0)"># -*- coding: utf-8 -*-
+#############################################################################
+#
+#    Copyright (c) 2007 Martin Reisenhofer &lt;martin.reisenhofer@funkring.net&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+
+from openerp import models, fields, api, _
+
+class ${model}(models.Model):
+	_name = "${model_name}"
+	_description = "${model_description}"
+	_inherit = "${super_model}"
+	
+	"${column_name}" = fields.${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="OpenERP: Module" enabled="true" name="Module: OpenERP Module"># -*- coding: utf-8 -*-
+#############################################################################
+#
+#    Copyright (c) 2007 Martin Reisenhofer &lt;martin.reisenhofer@funkring.net&gt;
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+
+{
+    "name" : "${name}",
+    "summary" : "${summary}",
+    "description":"""
+       ${description}
+    """,
+    "version" : "${version}",
+    "author" :  "oerp.at",
+    "website" : "http://oerp.at",
+    "category" : "Custom",
+    "depends" : ["${cursor}"],
+    "data" : [],
+    "auto_install" : False,
+    "installable": True
+}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="New Report Parser" enabled="true" name="Module: Report"># -*- coding: utf-8 -*-
+##############################################################################
+#
+#    OpenERP, Open Source Management Solution
+#    Copyright (C) 2004-2010 Tiny SPRL (&lt;http://tiny.be&gt;).
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+#
+##############################################################################
+
+from openerp.addons.at_base import extreport
+
+class Parser(extreport.basic_parser):
+    def __init__(self, cr, uid, name, context=None):
+        super(Parser, self).__init__(cr, uid, name, context=context)
+        ${cursor}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: New Window Action" enabled="true" name="o_action_new_window">return {
+	"name" : _("${name}"),
+	"view_type" : "form",
+	"view_mode" : "form",
+	"res_model" : "${model}",      	
+	"type" : "ir.actions.act_window",
+	"target" : "new"
+}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: New Window Action" enabled="true" name="o_action_new_window_nodestroy">return {
+	"name" : _("${name}"),
+	"view_type" : "form",
+	"view_mode" : "form",
+	"res_model" : "${model}",      	
+	"type" : "ir.actions.act_window",
+	"target" : "new",
+	"nodestroy": True
+}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: New Window Action" enabled="true" name="o_action_new_window_specified">res_id = res_obj.get_object_reference(cr,uid,"${module}","${view}")[1]                                
+return {
+	"name" : _("${name}"),
+	"view_type" : "form",
+	"view_mode" : "form",
+	"res_model" : "${model}",      	
+	"view_id" : False,
+	"views" : [(res_id,"form")],
+	"type" : "ir.actions.act_window",
+	"target" : "new"
+}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: Report Action" enabled="true" name="o_action_report">return {
+  "type" : "ir.actions.report.xml",
+  "report_name" : ${report_name},
+  "datas" : datas
+  }</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: class" enabled="true" name="o_class">class ${name}(osv.osv): 
+    _name = "${package}.${name}"
+    _description = "${description}"
+    _columns = {        
+    	${cursor}
+    }        
+${name}()</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: class" enabled="true" name="o_class_memory">class ${name}(osv.osv_memory): 
+    _name = "${package}.${name}"
+    _description = "${description}"
+    _columns = {        
+    	${cursor}
+    }        
+${name}()</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: Close Window" enabled="true" name="o_close_window">return { "type" : "ir.actions.act_window_close" }</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: Decimal Precision" enabled="true" name="o_dp">digits_compute=dp.get_precision("${precision}")</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: Import Decimal Precision" enabled="true" name="o_import_dp">import openerp.addons.decimal_precision as dp</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: Import Translation" enabled="true" name="o_import_translation">from openerp.tools.translate import _</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: Default Lambda" enabled="true" name="o_lambda">lambda self,cr,uid,c: </template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: ON DELETE SET NULL" enabled="true" name="o_ondelete_setnull">ondelete='set null'</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: Error" enabled="true" name="o_raise">raise osv.except_osv(_("Error"), _("${exception}"))</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: RelatedField" enabled="true" name="o_related">fields.related("${src_key_field}", "${dst_field}", type="${type}", obj="${type_obj}", string="${name},readonly=True),</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="OpenERP: Store" enabled="true" name="o_store">store={
+	"${model_other}" : (_relids_${other_model},["${other_field}"],${priority:10}),
+	"${model_current}": (lampda self, cr, uid, ids, context=None: ids, ["${current_field}"],${priority:10})
+}</template><template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="Window Action" enabled="true" name="o_window_action">act_obj = self.pool["ir.actions.act_window"]
+res = act_obj.for_xml_id(cr, uid, "${module}", "${action_id}", context=context)
+return res</template></templates>
